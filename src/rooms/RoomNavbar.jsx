@@ -49,7 +49,7 @@ const RoomNavbar = () => {
   const kidsRoomActive = Object.values(kidsRoom).includes("true");
 
   function checkRoomUsage(path) {
-    if (bedroomActive && path === "bedroom") {
+    if (bedroomActive && path === "") {
       return "room-link room-in-use";
     }
     if (livingRoomActive && path === "living-room") {
@@ -69,9 +69,6 @@ const RoomNavbar = () => {
     }
     return "room-link";
   }
-
-  const roomInUse =
-    localStorage.getItem("livingroom") === "true" ? true : false;
 
   return (
     <Wrapper>

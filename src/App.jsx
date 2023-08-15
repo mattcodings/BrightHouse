@@ -12,12 +12,12 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/brighthouse/",
+    path: "/brighthouse",
     element: <Layout />,
     error: <Error />,
     children: [
       {
-        path: "/brighthouse/bedroom",
+        path: "/brighthouse",
         element: <Bedroom />,
       },
       {
