@@ -17,27 +17,27 @@ const router = createBrowserRouter([
     error: <Error />,
     children: [
       {
-        index: true,
+        path: "/brighthouse/",
         element: <Bedroom />,
       },
       {
-        path: "living-room",
+        path: "/brighthouse/living-room",
         element: <LivingRoom />,
       },
       {
-        path: "kitchen",
+        path: "/brighthouse/kitchen",
         element: <Kitchen />,
       },
       {
-        path: "bathroom",
+        path: "/brighthouse/bathroom",
         element: <Bathroom />,
       },
       {
-        path: "dining-room",
+        path: "/brighthouse/dining-room",
         element: <DiningRoom />,
       },
       {
-        path: "kids-room",
+        path: "/brighthouse/kids-room",
         element: <KidsRoom />,
       },
     ],
