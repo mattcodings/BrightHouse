@@ -83,7 +83,7 @@ const RoomNavbar = () => {
             <NavLink to={path} onClick={setActiveTab} end>
               <h3 className="room-name">{name}</h3>
               {checkRoomUsage(path) === "room-link" ? (
-                <p>Not active</p>
+                <p>Inactive</p>
               ) : (
                 <p>Active</p>
               )}

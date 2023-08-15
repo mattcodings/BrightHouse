@@ -31,7 +31,11 @@ const Power = ({ title, icon, rangeBar, room, localName }) => {
           ) : (
             <BsToggleOff onClick={togglePower} className="toggle-icon" />
           )}
-          {power ? <span>Currently On</span> : <span>Currently Off</span>}
+          {power ? (
+            <span className="on-off-text">On</span>
+          ) : (
+            <span className="on-off-text">Off</span>
+          )}
         </div>
         <div className="range-bar">{rangeBar}</div>
       </section>

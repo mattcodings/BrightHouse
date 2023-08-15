@@ -40,7 +40,7 @@ const RoomControls = ({ room }) => {
           title="Temperature"
           localName="temperature"
           room={room}
-          measurement="&deg;"
+          measurement="&deg;F"
         />
         <Lamp room={room} />
         <Temperature

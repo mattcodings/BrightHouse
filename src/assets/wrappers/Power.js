@@ -6,7 +6,7 @@ const Wrapper = styled.section`
     justify-content: center;
     gap: 10px;
     font-size: 22px;
-    margin-top: 10px;
+    margin: 10px auto;
     align-items: center;
   }
   .control-box {
@@ -27,6 +27,10 @@ const Wrapper = styled.section`
   .range-bar {
     text-align: center;
     color: black;
+    margin-top: 10px;
+  }
+  .on-off-text {
+    font-size: 18px;
   }
 `;
 export default Wrapper;
