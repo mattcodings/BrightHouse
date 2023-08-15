@@ -12,7 +12,7 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/brighthouse/",
     element: <Layout />,
     error: <Error />,
     children: [
