@@ -14,7 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/brighthouse",
     element: <Layout />,
-    error: <Error />,
+
     children: [
       {
         path: "/brighthouse",
