@@ -49,7 +49,7 @@ const RoomNavbar = () => {
   const kidsRoomActive = Object.values(kidsRoom).includes("true");
 
   function checkRoomUsage(path) {
-    if (bedroomActive && path === "/") {
+    if (bedroomActive && path === "bedroom") {
       return "room-link room-in-use";
     }
     if (livingRoomActive && path === "living-room") {
