@@ -2,8 +2,8 @@ import { useState } from "react";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 
 const LightRangeSlider = ({ room }) => {
-  const [amount, setAmount] = useState(
-    Number(localStorage.getItem(room + "sliderAmount")) || 50
+  let [amount, setAmount] = useState(
+    Number(localStorage.getItem(room + "sliderAmount")) || 0
   );
 
   const slideAmount = localStorage.getItem(room + "sliderAmount");
@@ -15,9 +15,24 @@ const LightRangeSlider = ({ room }) => {
     localStorage.setItem(room + "sliderAmount", amount);
   }
 
+  function increaseAmount() {
+    setAmount(amount + 1);
+    if (amount > 99) {
+      amount = 99;
+    }
+    localStorage.setItem(room + "sliderAmount", amount + 1);
+  }
+  function decreaseAmount() {
+    setAmount(amount - 1);
+    if (amount < 1) {
+      amount = 1;
+    }
+    localStorage.setItem(room + "sliderAmount", amount - 1);
+  }
+
   return (
     <div>
-      <span>
+      <span onClick={decreaseAmount}>
         <BsFillMoonFill />
       </span>
       <input
@@ -30,7 +45,7 @@ const LightRangeSlider = ({ room }) => {
         className="range-meter"
       />
 
-      <span>
+      <span onClick={increaseAmount}>
         <BsFillSunFill />
       </span>
       <p>{slideAmount}%</p>

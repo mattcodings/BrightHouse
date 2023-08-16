@@ -50,7 +50,9 @@ const Temperature = ({ title, measurement, room }) => {
           className="arrow-box"
           onClick={raiseTemperature}
           onMouseDown={() => setHoldRaise(true)}
+          onTouchStart={() => setHoldRaise(true)}
           onMouseUp={() => setHoldRaise(false)}
+          onTouchEnd={() => setHoldRaise(false)}
         >
           <BiUpArrow className="arrow" />
         </div>
